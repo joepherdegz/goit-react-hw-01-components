@@ -13,7 +13,8 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
         alignItems: 'center',
         fontSize: 20,
         color: '#010101'
@@ -27,10 +28,10 @@ export const App = () => {
         stats={user.stats}
       />
 
-      <Statistics title="Upload stats" data={data}/>
+      <Statistics title="Upload stats" stats={data}/>
 
       <FriendList friends={friends} />
-
+      
       <TransactionHistory items={transactions} />;
 
     </div>
