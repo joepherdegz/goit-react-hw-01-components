@@ -4,9 +4,9 @@ import css from './TransactionHistory.module.css'
 export const TransactionHistory = ({ items }) => {
   return (
        
-    <table className="transaction-history">
+    <table className={css.transactionHistory}>
        
-      <thead>
+      <thead className={css.tableHeader}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -15,11 +15,11 @@ export const TransactionHistory = ({ items }) => {
       </thead>
 
       <tbody>
-        {items.map(items => (
-          <tr key={items.id}>
-            <td>{items.type}</td>
-            <td>{items.amount}</td>
-            <td>{items.currency}</td>
+        {items.map((items, index) => (
+          <tr key={items.id} className={index % 2 === 0 ? css.tableRowOdd : css.tableRowEven}>
+            <td className={css.tableData}>{items.type}</td>
+            <td className={css.tableData}>{items.amount}</td>
+            <td className={css.tableData}>{items.currency}</td>
           </tr>
         ))}
       </tbody>
