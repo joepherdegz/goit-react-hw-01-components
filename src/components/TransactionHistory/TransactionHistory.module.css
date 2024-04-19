@@ -12,7 +12,7 @@
 }
 
 .tableHeader {
-    padding: 8px;
+    padding: 10px;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid #ddd;
@@ -28,6 +28,9 @@
     border-right: 1px solid #ddd;
 }
 
+.thead {
+    border-right: 1px solid #ddd;
+}
 .tableData:first-of-type {
     text-transform: capitalize;
 }
